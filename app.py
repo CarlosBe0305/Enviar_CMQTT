@@ -20,7 +20,7 @@ def on_message(client, userdata, message):
 
 broker="157.230.214.127"
 port=1883
-client1= paho.Client("GIT-HUB")
+client1= paho.Client("CARLOS")
 client1.on_message = on_message
 
 
@@ -29,7 +29,7 @@ st.title("MQTT Control")
 
 if st.button('ON'):
     act1="ON"
-    client1= paho.Client("GIT-HUB")                           
+    client1= paho.Client("CARLOS")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
